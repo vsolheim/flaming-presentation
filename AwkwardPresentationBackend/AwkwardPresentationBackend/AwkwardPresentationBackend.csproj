@@ -161,11 +161,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-<<<<<<< HEAD
     <Compile Include="Controllers\TestController.cs" />
-=======
     <Compile Include="Controllers\PresentationController.cs" />
->>>>>>> e177c34b1f791cd795421a8fdb68eca1f67c21e5
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
