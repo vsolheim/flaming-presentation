@@ -1,18 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using System.Linq;
 using System.Web.Http;
+using AwkwardPresentationBackend.Models;
 
 namespace AwkwardPresentationBackend.Controllers
 {
     public class PresentationController : ApiController
     {
+        [HttpGet]
         public int StartSession()
         {
-            // return a new session ID for a new presentation
-            return 0;
+            using (var db = new DatabaseContext())
+            {
+                var newPresentation = new PresentationModel();
+                db.Presentations.Add(newPresentation);
+                db.SaveChanges();
+
+                var presentation = db.Presentations.Select(p => p).ToList().Last();
+
+                return presentation.Id;
+            }
         }
         
 

@@ -11,32 +11,6 @@ namespace AwkwardPresentationBackend.Controllers
     {
         public ActionResult Index()
         {
-            string test2 = "";
-
-            using (var db = new DatabaseContext())
-            {
-                var presentation = new PresentationModel();
-
-                db.Presentations.Add(presentation);
-                db.SaveChanges();
-
-                var test = db.Presentations.Select(p => p);
-
-                foreach (var testItem in test)
-                {
-
-                    if (testItem != null && testItem.PresentationText != null)
-                    {
-                        foreach (var str in testItem.PresentationText)
-                        {
-
-                            test2 = test2 + str;
-                        } 
-                    }
-                }
-            }
-
-
             return View();
         }
 
