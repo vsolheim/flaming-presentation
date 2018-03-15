@@ -9,27 +9,18 @@ namespace AwkwardPresentationBackend.Controllers
 {
     public class HomeController : Controller
     {
-        public string Index()
+        public ActionResult Index()
         {
             string test2 = "";
 
             using (var db = new DatabaseContext())
             {
-                var presentation = new PresentationModel()
-                {
-                    PresentationText = new List<string>()
-                    {
-                        "string one"
-                    }
-                };
+                var presentation = new PresentationModel();
 
                 db.Presentations.Add(presentation);
                 db.SaveChanges();
 
-                var test3 = db.Presentations.Select(p => p);
-
-                var test = from p in db.Presentations
-                    select p;
+                var test = db.Presentations.Select(p => p);
 
                 foreach (var testItem in test)
                 {
@@ -46,8 +37,7 @@ namespace AwkwardPresentationBackend.Controllers
             }
 
 
-            return test2;
-            //return View();
+            return View();
         }
 
         public ActionResult About()
