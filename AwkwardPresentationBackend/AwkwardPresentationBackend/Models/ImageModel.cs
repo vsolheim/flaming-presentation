@@ -7,14 +7,14 @@ using System.Web;
 
 namespace AwkwardPresentationBackend.Models
 {
-    public class PresentationModel
+    public class ImageModel
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public int Name { get; set; }
 
-        public IList<ImageModel> Images { get; set; }
+        public string Url { get; set; }
+        public string Title { get; set; }
+        public string Text { get; set; }
     }
-
 }

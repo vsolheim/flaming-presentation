@@ -3,12 +3,15 @@ using System.Net;
 using System.Web.Http;
 using System.Web.Mvc;
 using AwkwardPresentationBackend.Models;
-using Newtonsoft.Json;
 
 namespace AwkwardPresentationBackend.Controllers
 {
     public class PresentationController : ApiController
     {
+        /// <summary>
+        /// Start a new presentation and get the ID of it.
+        /// </summary>
+        /// <returns></returns>
         [System.Web.Http.HttpGet]
         public int StartSession()
         {
@@ -45,14 +48,27 @@ namespace AwkwardPresentationBackend.Controllers
                 {
                     ContentType = "application/json",
                     Data = presentation, 
-                    JsonRequestBehavior = JsonRequestBehavior.AllowGet,
+                    JsonRequestBehavior = JsonRequestBehavior.AllowGet
                 };
             }
         }
 
-        public void UploadSlideData(int id, string url, string text)
+        [System.Web.Http.HttpPost]
+        public void UploadSlideData([FromBody] TodoItem item)
         {
-            // Add this text to 
+            //using (var db = new DatabaseContext())
+            //{
+            //    // Add this text to 
+            //}
+
+            //return GetSlideData(id);
         }
+    }
+
+    public class TodoItem
+    {
+        public long Id { get; set; }
+        public string Name { get; set; }
+        public bool IsComplete { get; set; }
     }
 }
