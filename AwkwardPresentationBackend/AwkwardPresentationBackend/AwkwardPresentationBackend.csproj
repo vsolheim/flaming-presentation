@@ -170,6 +170,10 @@
     <Compile Include="Migrations\201803151757160_Add_ImageModel.Designer.cs">
       <DependentUpon>201803151757160_Add_ImageModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803160939275_removed_name_from_presentationModel.cs" />
+    <Compile Include="Migrations\201803160939275_removed_name_from_presentationModel.Designer.cs">
+      <DependentUpon>201803160939275_removed_name_from_presentationModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DatabaseContext.cs" />
     <Compile Include="Models\ImageModel.cs" />
@@ -234,6 +238,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201803151757160_Add_ImageModel.resx">
       <DependentUpon>201803151757160_Add_ImageModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803160939275_removed_name_from_presentationModel.resx">
+      <DependentUpon>201803160939275_removed_name_from_presentationModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
