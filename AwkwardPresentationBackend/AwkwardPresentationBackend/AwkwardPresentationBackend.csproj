@@ -171,6 +171,10 @@
     <Compile Include="Migrations\201803161024143__InitialCreate.Designer.cs">
       <DependentUpon>201803161024143__InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803160939275_removed_name_from_presentationModel.cs" />
+    <Compile Include="Migrations\201803160939275_removed_name_from_presentationModel.Designer.cs">
+      <DependentUpon>201803160939275_removed_name_from_presentationModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ClickerModel.cs" />
     <Compile Include="Models\DatabaseContext.cs" />
@@ -236,6 +240,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201803161024143__InitialCreate.resx">
       <DependentUpon>201803161024143__InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803160939275_removed_name_from_presentationModel.resx">
+      <DependentUpon>201803160939275_removed_name_from_presentationModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

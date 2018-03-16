@@ -12,7 +12,6 @@ namespace AwkwardPresentationBackend.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public int Name { get; set; }
 
         public IList<ImageModel> Images { get; set; }
     }
