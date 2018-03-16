@@ -10,6 +10,7 @@ namespace AwkwardPresentationBackend.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;
         }
 
         protected override void Seed(AwkwardPresentationBackend.Models.DatabaseContext context)

@@ -1,4 +1,6 @@
-﻿using AwkwardPresentationBackend.Services;
+﻿using AwkwardPresentationBackend.Models;
+using AwkwardPresentationBackend.Services;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -33,12 +35,40 @@ namespace AwkwardPresentationBackend.Controllers
 
         public async Task<ActionResult> RunTest()
         {
-            var data = await ImageProvider.RunAsync("");
+
+            var a = "http://52.178.117.78/predict";
+            var b = JsonConvert.SerializeObject(
+                new { Message = "Test of concept with a few words" }
+            );
+            var data = await ImageProvider.RunAsync(b, a);
             return new JsonResult()
             {
                 Data = new { Result = data},
                 JsonRequestBehavior = JsonRequestBehavior.AllowGet
             }; 
+        }
+
+        public async Task<ActionResult> ClickerTest()
+        {
+            var dummy = new ClickerModel();
+            dummy.Name = "test";
+            dummy.Data = "DummyData" + new Random(10);
+            dummy.Published_at = DateTime.Now;
+
+            var result = await ImageProvider.RunAsync(dummy, "http://placeholder.no/api/clicker/inputdata");
+
+            if (result != null && result is bool && (bool)result)
+                return new JsonResult()
+                {
+                    Data = new { Result = "Success" },
+                    JsonRequestBehavior = JsonRequestBehavior.AllowGet
+                };
+            else
+                return new JsonResult()
+                {
+                    Data = new { Result = "Failure" },
+                    JsonRequestBehavior = JsonRequestBehavior.AllowGet
+                };
         }
     }
 }

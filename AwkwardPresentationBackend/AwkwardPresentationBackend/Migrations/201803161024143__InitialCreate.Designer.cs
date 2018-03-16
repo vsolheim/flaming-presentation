@@ -7,18 +7,18 @@ namespace AwkwardPresentationBackend.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class Add_ImageModel : IMigrationMetadata
+    public sealed partial class _InitialCreate : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Add_ImageModel));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(_InitialCreate));
         
         string IMigrationMetadata.Id
         {
-            get { return "201803151757160_Add_ImageModel"; }
+            get { return "201803161024143__InitialCreate"; }
         }
         
         string IMigrationMetadata.Source
         {
-            get { return Resources.GetString("Source"); }
+            get { return null; }
         }
         
         string IMigrationMetadata.Target

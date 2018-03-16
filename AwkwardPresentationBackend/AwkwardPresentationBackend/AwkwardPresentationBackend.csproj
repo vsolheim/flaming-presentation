@@ -160,17 +160,19 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ClickerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Controllers\PresentationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201803151757160_Add_ImageModel.cs" />
-    <Compile Include="Migrations\201803151757160_Add_ImageModel.Designer.cs">
-      <DependentUpon>201803151757160_Add_ImageModel.cs</DependentUpon>
+    <Compile Include="Migrations\201803161024143__InitialCreate.cs" />
+    <Compile Include="Migrations\201803161024143__InitialCreate.Designer.cs">
+      <DependentUpon>201803161024143__InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\ClickerModel.cs" />
     <Compile Include="Models\DatabaseContext.cs" />
     <Compile Include="Models\ImageModel.cs" />
     <Compile Include="Models\PresentationModel.cs" />
@@ -232,8 +234,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201803151757160_Add_ImageModel.resx">
-      <DependentUpon>201803151757160_Add_ImageModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201803161024143__InitialCreate.resx">
+      <DependentUpon>201803161024143__InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

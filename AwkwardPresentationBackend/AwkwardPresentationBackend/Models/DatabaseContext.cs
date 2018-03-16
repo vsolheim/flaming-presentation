@@ -21,5 +21,6 @@ namespace AwkwardPresentationBackend.Models
         // on configuring and using a Code First model, see http://go.microsoft.com/fwlink/?LinkId=390109.
 
         public virtual DbSet<PresentationModel> Presentations { get; set; }
+        public virtual DbSet<ClickerModel> ClickerData { get; set; }
     }
 }
